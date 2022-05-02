@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+@mixin border {
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+.content__title {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 800;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+  padding: 10px 15px;
+  letter-spacing: 4px;
+}
+header {
+  background: url(../img/mountains-1.jpg);
+  background-position: center;
+  height: 250px;
+  padding: 20px;
+  color: #fff;
+  .top__item {
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h1 {
+      font-size: 30px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+    p {
+      font-size: 17px;
+    }
+    .follow__content-center {
+      display: flex;
+      justify-content: center;
+      .follow__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+        i {
+          height: 20px;
+          width: 20px;
+          border: 1px solid #fff;
+          border-radius: 5px;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.5s;
+          cursor: pointer;
+        }
+        i:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+
+    .vistit__content {
+      i {
+        font-size: 60px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.cv__content {
+  .cv__content-info {
+    .cv__info-left {
+      .left__intro {
+        @include border;
+        position: relative;
+        h1 {
+          color: #f39c12;
+          font-size: 70px;
+          font-weight: 800;
+          -webkit-text-fill-color: white;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: #f39c12;
+
+          position: absolute;
+          top: 0;
+          left: -15px;
+        }
+        .left__intro-text {
+          margin-top: 90px;
+          font-size: 15px;
+          color: #666;
+        }
+      }
+      .left__specia {
+        @include border;
+        .left__spectia-content {
+          .left__specia-item {
+            i {
+              font-size: 50px;
+              height: 90px;
+              width: 90px;
+              line-height: 90px;
+              border-radius: 50%;
+              border: 1px solid #f39c12;
+              color: #f39c12;
+              position: relative;
+            }
+            i::after {
+              content: "";
+              height: 20px;
+              width: 3px;
+              background-color: #f39c12;
+              position: absolute;
+              bottom: -25px;
+              left: 41px;
+            }
+            p {
+              margin-top: 30px;
+              font-size: 15px;
+              span {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+    .cv__info-right {
+      height: 630px;
+      @include border;
+      .right__edu {
+        margin: 10px 0 10px 50px;
+        ul {
+          list-style: none;
+          li {
+            h6 {
+              margin: 0;
+              font-weight: 600;
+              font-size: 17px;
+            }
+            p {
+              margin: 0;
+              position: relative;
+            }
+            span {
+              margin: 10px;
+              padding-left: 20px;
+              border-left: 1px solid #333;
+              color: #888;
+            }
+            p::before {
+              content: "";
+              height: 7px;
+              width: 7px;
+              background-color: #f39c12;
+              position: absolute;
+              bottom: 32px;
+              left: -19px;
+              border-radius: 50%;
+            }
+            p::after {
+              content: "";
+              height: 20px;
+              width: 2px;
+              background-color: #666;
+              position: absolute;
+              bottom: 5px;
+              left: -16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cv__content-skill {
+    @include border;
+    .cv__cre {
+      .cre__list {
+        ul {
+          list-style: none;
+          li {
+            p {
+              font-size: 17px;
+              font-weight: 500;
+              position: relative;
+            }
+            p::before {
+              content: "";
+              height: 7px;
+              width: 7px;
+              background-color: #f39c12;
+              position: absolute;
+              bottom: 10px;
+              left: -19px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+    .cv__soft {
+      .soft__list {
+        .soft__item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px 0;
+          padding-right: 50px;
+          .soft__item-icon {
+            height: 40px;
+            width: 40px;
+            font-size: 22px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            transition: all 0.5s;
+          }
+          .soft__item-icon:hover {
+            color: #f39c12;
+            border-color: #f39c12;
+          }
+          span {
+            margin: 0 30px;
+            font-weight: 700;
+            font-size: 18px;
+          }
+          div {
+            i {
+              font-size: 10px;
+              margin: 0 10px;
+            }
+            .active {
+              color: #f39c12;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cv__content-hobbies {
+    @include border();
+    .cv__hobbies-main {
+      .cv__hobbies-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        width: 120px;
+        border: 2px solid #f39c12;
+        border-radius: 50%;
+        i {
+          font-size: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: all 0.5s;
+          span {
+            font-size: 10px;
+            margin-top: 10px;
+          }
+        }
+        i:hover {
+          color: #f39c12;
+        }
+      }
+    }
+  }
+}
